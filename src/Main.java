@@ -14,11 +14,10 @@ public class Main {
 
         System.out.println("A lista contém " + listaDePessoas.size() + " pessoas\n");
         System.out.println("A primeira pessoa da lista é: " + listaDePessoas.get(0) + "\n");
-        System.out.println("Lista de pessoas");
+        System.out.println("Lista de pessoas: ");
         for (Pessoa pessoa : listaDePessoas) {
             System.out.println(pessoa);
         }
-        System.out.println();
 
 
     }
