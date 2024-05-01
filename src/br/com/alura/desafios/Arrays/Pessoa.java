@@ -1,6 +1,4 @@
-
-
-package br.com.alura.desafios.desafio01;
+package br.com.alura.desafios.Arrays;
 
 public class Pessoa {
     private String nome;

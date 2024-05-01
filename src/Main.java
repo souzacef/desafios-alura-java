@@ -1,5 +1,5 @@
-import br.com.alura.desafios.desafio01.Pessoa;
 import java.util.ArrayList;
+import br.com.alura.desafios.Arrays.Pessoa;
 
 public class Main {
     public static void main(String[] args) {
