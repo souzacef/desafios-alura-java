@@ -8,6 +8,7 @@ import br.com.alura.desafios.desafio02.ContaBancaria;
 import br.com.alura.desafios.desafio02.IdadePessoa;
 import br.com.alura.desafios.desafio02.Produto;
 import br.com.alura.desafios.desafio02.Student;
+import br.com.alura.desafios.desafio02.Livro;
 
 
 public class Main {
@@ -78,6 +79,17 @@ public class Main {
         System.out.println("Nota 2: " + aluno2.getNota2());
         System.out.println("Nota 3: " + aluno2.getNota3());
         System.out.println("Média: " + aluno2.calculaMedia() + "\n");
+
+        Livro livro1 = new Livro();
+        Livro livro2 = new Livro();
+
+        livro1.setTitulo("Capitães da Areia");
+        livro1.setAutor("Jorge Amado");
+        livro1.exibeDetalhe();
+
+        livro2.setTitulo("Anjos e Demônios");
+        livro2.setAutor("Dan Brown");
+        livro2.exibeDetalhe();
 
 
 
