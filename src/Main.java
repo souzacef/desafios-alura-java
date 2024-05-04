@@ -9,6 +9,14 @@ import br.com.alura.desafios.desafio02.IdadePessoa;
 import br.com.alura.desafios.desafio02.Produto;
 import br.com.alura.desafios.desafio02.Student;
 import br.com.alura.desafios.desafio02.Livro;
+import br.com.alura.desafios.desafio03.Gato;
+import br.com.alura.desafios.desafio03.ModeloCarro;
+import br.com.alura.desafios.desafio03.Cachorro;
+import br.com.alura.desafios.desafio03.ContaCorrente;
+import br.com.alura.desafios.desafio04.ConversorMoeda;
+import br.com.alura.desafios.desafio04.CalculadoraSalaRetangular;
+import br.com.alura.desafios.desafio04.TabuadaMultiplicacao;
+import br.com.alura.desafios.desafio04.ConversorTemperaturaPadrao;
 
 
 public class Main {
@@ -91,6 +99,40 @@ public class Main {
         livro2.setAutor("Dan Brown");
         livro2.exibeDetalhe();
 
+        ModeloCarro modeloCarro = new ModeloCarro();
+        modeloCarro.definirModelo("Azera");
+        modeloCarro.defineCor("Preto");
+        modeloCarro.definirPreco(45000, 44000, 43000);
+        modeloCarro.exibirInfo();
+
+        Cachorro cachorro = new Cachorro();
+        cachorro.emitirSomDeAnimal();
+        cachorro.abanarRabo();
+
+        Gato gato = new Gato();
+        gato.emitirSomDeAnimal();
+        gato.arranharMoveis();
+
+        ContaCorrente contaCorrente = new ContaCorrente();
+        contaCorrente.consultaSaldo();
+        contaCorrente.depositar(1500);
+        contaCorrente.sacar(3000);
+        contaCorrente.cobrarTarifaMensal();
+
+        ConversorMoeda conversor = new ConversorMoeda();
+        conversor.converterDolarParaReal(87.79);
+
+        CalculadoraSalaRetangular calculadoraSalaRetangular = new CalculadoraSalaRetangular();
+        calculadoraSalaRetangular.calcularArea(15.9, 5.3);
+        calculadoraSalaRetangular.calcularPerimetro(2.3, 6.9, 4.7, 5.1);
+
+        TabuadaMultiplicacao tabuada = new TabuadaMultiplicacao();
+        tabuada.mostrarTabuada(9);
+        System.out.println();
+
+        ConversorTemperaturaPadrao conversorTemp = new ConversorTemperaturaPadrao();
+        conversorTemp.celsiusParaFahrenheit(25);
+        conversorTemp.fahrenheitParaCelsius(86);
 
 
         ArrayList<Pessoa> listaDePessoas = new ArrayList<>();
@@ -108,6 +150,11 @@ public class Main {
         for (Pessoa pessoa : listaDePessoas) {
             System.out.println(pessoa);
         }
+
+        System.out.println();
+
+
+
 
 
 
