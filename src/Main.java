@@ -17,6 +17,8 @@ import br.com.alura.desafios.desafio04.ConversorMoeda;
 import br.com.alura.desafios.desafio04.CalculadoraSalaRetangular;
 import br.com.alura.desafios.desafio04.TabuadaMultiplicacao;
 import br.com.alura.desafios.desafio04.ConversorTemperaturaPadrao;
+import br.com.alura.desafios.desafio05.ProdutoPerecivel;
+import br.com.alura.desafios.desafio05.ProdutosDeMercado;
 
 
 public class Main {
@@ -66,7 +68,7 @@ public class Main {
         idade2.verificaIdade();
 
         Produto produto = new Produto("Celular", 2000.0);
-        System.out.println("Produto: " + produto.getNome());
+        System.out.println("ProdutoMercado: " + produto.getNome());
         System.out.println("Preço: R$ " + produto.getPreco() + "\n");
         produto.aplicarDesconto(12);
         System.out.println("Preço com desconto: R$ " + produto.getPreco() + "\n");
@@ -153,10 +155,25 @@ public class Main {
 
         System.out.println();
 
+       ArrayList<ProdutosDeMercado> produtosDeMercado = new ArrayList<>();
+       ProdutosDeMercado produtosDeMercado1 = new ProdutosDeMercado("Arroz", 24.99, 15);
+       ProdutosDeMercado produtosDeMercado2 = new ProdutosDeMercado("Feijão", 6.99, 10);
+       ProdutosDeMercado produtosDeMercado3 = new ProdutosDeMercado("Batata", 9.99,50);
+       ProdutosDeMercado produtosDeMercado4 = new ProdutosDeMercado("Macarrão", 3.49, 500);
 
+       produtosDeMercado.add(produtosDeMercado1);
+       produtosDeMercado.add(produtosDeMercado2);
+       produtosDeMercado.add(produtosDeMercado3);
+       produtosDeMercado.add(produtosDeMercado4);
 
+        System.out.println("A lista contém " + produtosDeMercado.size() + " itens");
+        System.out.println("O 1º item da lista é: " + produtosDeMercado.get(0));
+        System.out.println("O 2º item da lista é: " + produtosDeMercado.get(1));
+        System.out.println("O 3º item da lista é: " + produtosDeMercado.get(2));
+        System.out.println("O ultimo item da lista é: " + produtosDeMercado.get(produtosDeMercado.size() - 1) + "\n");
 
-
+        ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel("Carne", 39.90, 187);
+        System.out.println(produtoPerecivel + "\n");
 
     }
 }
