@@ -9,16 +9,14 @@ import br.com.alura.desafios.desafio02.IdadePessoa;
 import br.com.alura.desafios.desafio02.Produto;
 import br.com.alura.desafios.desafio02.Student;
 import br.com.alura.desafios.desafio02.Livro;
-import br.com.alura.desafios.desafio03.Gato;
-import br.com.alura.desafios.desafio03.ModeloCarro;
-import br.com.alura.desafios.desafio03.Cachorro;
-import br.com.alura.desafios.desafio03.ContaCorrente;
+import br.com.alura.desafios.desafio03.*;
 import br.com.alura.desafios.desafio04.ConversorMoeda;
 import br.com.alura.desafios.desafio04.CalculadoraSalaRetangular;
 import br.com.alura.desafios.desafio04.TabuadaMultiplicacao;
 import br.com.alura.desafios.desafio04.ConversorTemperaturaPadrao;
 import br.com.alura.desafios.desafio05.ProdutoPerecivel;
 import br.com.alura.desafios.desafio05.ProdutosDeMercado;
+
 
 
 public class Main {
@@ -175,7 +173,48 @@ public class Main {
         ProdutoPerecivel produtoPerecivel = new ProdutoPerecivel("Carne", 39.90, 187);
         System.out.println(produtoPerecivel + "\n");
 
+        ArrayList<String> listaDeStrings = new ArrayList<>();
+        listaDeStrings.add("Java");
+        listaDeStrings.add("C#");
+        listaDeStrings.add("Python");
+        listaDeStrings.add("Kotlin");
+
+        for (String elemento: listaDeStrings) {
+            System.out.println(elemento);
+        }
+
+        Animal animal = new Cachorro();
+        if (animal instanceof Cachorro) {
+            Cachorro cachorro1 = (Cachorro) animal;
+            System.out.println();
+            cachorro1.abanarRabo();
+            cachorro1.emitirSomDeAnimal();
+        }else {
+            System.out.println("O objeto não é um Cachorro.");
+        }
+
+        Produto produto1 = new Produto("Arroz", 27.99);
+        Produto produto2 = new Produto("Feijão", 6.99);
+        Produto produto3 = new Produto("Batata", 9.99);
+        Produto produto4 = new Produto("Macarrão", 3.49);
+
+        ArrayList<Produto> listaDeProdutos = new ArrayList<>();
+        listaDeProdutos.add(produto1);
+        listaDeProdutos.add(produto2);
+        listaDeProdutos.add(produto3);
+        listaDeProdutos.add(produto4);
+
+        double somaPrecoProdutos = 0;
+
+        for (Produto produtos : listaDeProdutos) {
+            somaPrecoProdutos += produtos.getPreco();
+        }
+
+        double precoMedio = somaPrecoProdutos / listaDeProdutos.size();
+        System.out.println("\nPreço médio dos produtos: " + precoMedio + "\n");
+
 
 
     }
+
 }
