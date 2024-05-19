@@ -1,4 +1,4 @@
-                                                                                                    Aplicando orientação a objetos.
+                                                   Aplicando orientação a objetos.
 
 1 - Crie uma classe Pessoa com um método que exibe "Olá, mundo!" no console.
 
